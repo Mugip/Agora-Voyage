@@ -1,0 +1,67 @@
+name: Build and Lint
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Node.js
+      - name: Set up Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      # Set up Go
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.x
+
+      # Install dependencies and build Angular app
+      - name: Install dependencies and build Angular app
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+
+      # Install Go dependencies
+      - name: Install Go dependencies
+        run: go mod download
+
+      # Lint Golang
+      - name: Lint Golang
+        run: go fmt ./...
+
+      # Lint Angular
+      - name: Lint Angular
+        run: |
+          cd frontend
+          npm run lint
+
+      # Test Golang
+      - name: Test Golang
+        run: go test ./...
+
+      # Test Angular (if applicable)
+      - name: Test Angular
+        run: |
+          # Add Angular test script here if available
+
+      # Build artifacts for deployment (if applicable)
+      - name: Build artifacts
+        run: |
+          # Add build script for artifacts generation if applicable
+
+      # Create release or deploy to production (if applicable)
+      - name: Deploy
+        run: |
+          # Add deployment script here if applicabl
