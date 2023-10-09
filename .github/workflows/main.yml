@@ -1,11 +1,11 @@
-yaml
-name:Code Review
-
-on:pull_request
-    branches:- main
+name: Code Review
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-build:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +24,7 @@ build:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          # Call ChatGPT from OpenAI API to review code and generate comments
+          # Call ChatGPT from the OpenAI API to review code and generate comments
           # Store the comments in a file, e.g., comments.txt
 
       - name: Comment on Pull Request
@@ -47,5 +47,5 @@ build:
               });
               console.log(response);
             }
-            
+
             createComment();
