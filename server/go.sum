@@ -1,0 +1,6 @@
+github.com/golang/protobuf v1.4.3 h1:2gDRJfT6U15B9WfRzfwTCzDw1nhuGroVJY16iHDwT6A=
+github.com/golang/protobuf v1.4.3/go.mod h1:q0lPpwZy16wSfhgTm/lc+hM5nFnp6HB67by9x885IKE=
+github.com/google/go-cmp v0.5.4/go.mod h1:q0lPpwZy16wSfhgTm/lc+hM5nFnp6HB67by9x885IKE=
+github.com/google/go-cmp v0.5.4 h1:50cK7+6zdt0jkiqPkYMu2zSmPO5y41phWdzff26BVMw=
+github.com/google/go-querystring v1.0.0 h1:P3uKJHTrC3vj/mGWH6k2cP4O6CWBvS7qRhq5r2SWGtE=
+github.com/google/go-querystring v1.0.0/go.mod h1:vPty8IpV6nezatQPLWNcDKxbLAVZw7id/gPNRoaBS/4
