@@ -1,1 +1,31 @@
+scss
+// Define color variables
+$primary-color: navy;
+$secondary-color: gold;
+$accent-color: silver;
 
+// Use color variables
+.header {
+  background-color: $primary-color;
+  color: $accent-color;
+}
+
+.button {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+// Define typography variables
+$base-font-size: 16px;
+$heading-font-family: serif;
+$body-font-family: sans-serif;
+
+// Use typography variables
+h1, h2, h3 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size * 2;
+}
+
+p {
+  font-family: $body-font-family;
+  font-size: $base-font-size;
+}
