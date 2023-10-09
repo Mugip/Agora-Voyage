@@ -1,4 +1,5 @@
 name: Code Review
+
 on:
   pull_request:
     branches:
@@ -37,7 +38,7 @@ jobs:
             const fs = require('fs');
             const comments = fs.readFileSync(process.env.COMMENTS_FILE, 'utf8');
             const parsedComments = JSON.parse(comments);
-
+            
             async function createComment() {
               const response = await github.request('POST /repos/{owner}/{repo}/pulls/{pull_number}/comments', {
                 owner: context.repo.owner,
@@ -47,5 +48,5 @@ jobs:
               });
               console.log(response);
             }
-
+            
             createComment();
