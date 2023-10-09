@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 
@@ -30,10 +31,17 @@ func main() {
 	authRouter.HandleFunc("/logout", authHandler.Logout).Methods("POST")
 
 	// more routes for other features will be added here
-
-	log.Println("Server is running on port 8080...")
-	err := http.ListenAndServe(":8080", router)
-	if err != nil {
-		log.Fatalf("Failed to start server: %v", err)
+	router.HandleFunc("/", homeHandler).Methods("GET")
+	router.HandleFunc("/login", loginHandler).Methods("POST")
+	router.HandleFunc("/protected", protectedHandler).Methods("GET")
+	
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
 	}
-}
+	log.Printf("Server started on port %s", port)
+	log.Fatal(http.ListenAndServe(":"+port, router))
+
+	}
+
+	
