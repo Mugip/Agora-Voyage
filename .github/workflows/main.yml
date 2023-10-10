@@ -16,7 +16,9 @@ jobs:
       - name: Set Up Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.17
+          go-version: 1.2
+      - name: Install dependencies
+        run: npm ci
 
       # Additional steps for installing dependencies and building the app can be added here
 
