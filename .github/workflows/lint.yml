@@ -45,3 +45,6 @@ jobs:
 
       - name: Lint Angular Code
         run: ng lin
+      - name: Install dependencies
+        run: npm ci
+        
