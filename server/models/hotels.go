@@ -12,8 +12,8 @@ import (
 )
 
 var (
-	amadeusAPIKey   = os.Getenv("AMADEUS_API_KEY")      // Set your Amadeus API key here
-	openAIAPIKey    = os.Getenv("OPENAI_API_KEY")       // Set your OpenAI API key here
+	amadeusAPIKey   = os.Getenv("GfSs5vIeW0X2TmyawoWdlmPJie5VuMcT")      // Set your Amadeus API key here
+	openAIAPIKey    = os.Getenv("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")       // Set your OpenAI API key here
 	mapAPIKey       = os.Getenv("MAP_API_KEY")          // Set your Map API key here
 	openAISecretKey = os.Getenv("OPENAI_API_SECRET_KEY") // Set your OpenAI API Secret key here
 )
