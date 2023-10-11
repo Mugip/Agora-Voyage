@@ -61,10 +61,10 @@ func (c *Config) loadFromFile() error {
 }
 
 // Example usage:
-// config := &Config{}
-// if err := config.Load(); err != nil {
-//   panic(err)
-// }
-// fmt.Println(config.Environment)
+ config := &Config{}
+ if err := config.Load(); err != nil {
+   panic(err)
+ }
+ fmt.Println(config.Environment)
 
 
