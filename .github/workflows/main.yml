@@ -1,4 +1,5 @@
 name: Secure App Build, Test, and Deploy
+
 on:
   push:
     branches:
@@ -20,14 +21,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.8.0
-     
+
       - name: Run Code Review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.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 }}
-          run: |
-        # Call ChatGPT from the OpenAI API to review code and generate comments
-        # Store the comments in a file, e.g., comments.txt 
+        run: |
+          # Call ChatGPT from the OpenAI API to review code and generate comments
+          # Store the comments in a file, e.g., comments.txt
 
       - name: Install Dependencies
         run: npm install
@@ -85,5 +86,4 @@ jobs:
         run: npm run build
 
       - name: Deploy to Production
-        # Add your deployment steps here
-
+        # Add your deployment steps here 
