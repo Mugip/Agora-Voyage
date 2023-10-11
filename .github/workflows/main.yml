@@ -25,9 +25,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.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 }}
-          run: |
-           # Call ChatGPT from the OpenAI API to review code and generate comments
-           # Store the comments in a file, e.g., comments.txt
+        run: |
+         # Call ChatGPT from the OpenAI API to review code and generate comments
+         # Store the comments in a file, e.g., comments.txt
 
       - name: Install Dependencies
         run: npm install
