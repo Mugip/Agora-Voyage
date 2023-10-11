@@ -1,49 +1,88 @@
-name: Code Review
+name: Secure App Build, Test, and Deploy
 on:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+
       - name: Set Up Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.2
-      - name: Install Dependencies
-        run: npm install
-      - name: Install dependencies
-        run: npm ci
-      # Additional steps for installing dependencies and building the app can be added here
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.8.0
+     
       - name: Run Code Review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.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 }}
-        run: |
-          # Call ChatGPT from the OpenAI API to review code and generate comments
-          # Store the comments in a file, e.g., comments.txt
-      - name: Comment on Push
-        uses: actions/github-script@v4
-        env:
-          COMMENTS_FILE: comments.txt
+          run: |
+        # Call ChatGPT from the OpenAI API to review code and generate comments
+        # Store the comments in a file, e.g., comments.txt 
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Angular App
+        run: npm run build
+
+  test:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Go
+        uses: actions/setup-go@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const fs = require('fs');
-            const comments = fs.readFileSync(process.env.COMMENTS_FILE, 'utf8');
-            const parsedComments = JSON.parse(comments);
+          go-version: 1.2
 
-            async function createComment() {
-              const response = await github.request('POST /repos/{owner}/{repo}/pulls/{pull_number}/comments', {
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.payload.pull_request.number,
-                body: parsedComments.join('\n'),
-              });
-              console.log(response);
-            }
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.8.0
 
-            createComment();
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Backend Unit Tests
+        run: go test ./...
+
+      - name: Run Frontend Unit Tests
+        run: npm run test
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [test]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.8.0
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Angular App
+        run: npm run build
+
+      - name: Deploy to Production
+        # Add your deployment steps here
