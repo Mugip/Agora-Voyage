@@ -22,8 +22,8 @@
     "stripe": "^8.185.0",
     "axios": "^0.24.0",
     "ngx-cookie-service": "^12.0.0",
-    "@angular/material": "^12.2.17",  // Updated to the latest version
-    "@angular/animations": "^12.2.17" // Updated to the latest version
+    "@angular/material": "^12.2.17",
+    "@angular/animations": "^12.2.17"
   },
   "devDependencies": {
     "@angular/cli": "^12.2.0",
