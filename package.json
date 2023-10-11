@@ -21,7 +21,7 @@
     "mongoose": "^6.1.4",
     "stripe": "^8.185.0",
     "axios": "^0.24.0",
-    "ngx-cookie-service": "^12.0.0",
+    "ngx-cookie-service": "^16.0.1",
     "@angular/material": "^16.2.7",
     "@angular/animations": "^16.2.9",
     "@angular/common": "^16.2.9"
