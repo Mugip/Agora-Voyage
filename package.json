@@ -10,7 +10,7 @@
     "lint": "ng lint"
   },
   "keywords": ["luxury", "travel", "app"],
-  "author": "Your Name",
+  "author": "Mugisha Pius",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
