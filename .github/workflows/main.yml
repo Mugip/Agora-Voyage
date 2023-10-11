@@ -1,18 +1,14 @@
 name: Code Review
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
       - name: Set Up Go
         uses: actions/setup-go@v2
         with:
@@ -21,17 +17,14 @@ jobs:
         run: npm install
       - name: Install dependencies
         run: npm ci
-
       # Additional steps for installing dependencies and building the app can be added here
-
       - name: Run Code Review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.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 }}
+          OPENAI_API_KEY: ${{ secrets.'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' }}
         run: |
           # Call ChatGPT from the OpenAI API to review code and generate comments
           # Store the comments in a file, e.g., comments.txt
-
       - name: Comment on Push
         uses: actions/github-script@v4
         env:
@@ -42,7 +35,7 @@ jobs:
             const fs = require('fs');
             const comments = fs.readFileSync(process.env.COMMENTS_FILE, 'utf8');
             const parsedComments = JSON.parse(comments);
-            
+
             async function createComment() {
               const response = await github.request('POST /repos/{owner}/{repo}/pulls/{pull_number}/comments', {
                 owner: context.repo.owner,
@@ -52,5 +45,5 @@ jobs:
               });
               console.log(response);
             }
-            
+
             createComment();
