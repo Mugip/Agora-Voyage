@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.8.0
-
       - name: Run Code Review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
