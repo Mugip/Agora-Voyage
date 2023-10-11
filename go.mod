@@ -9,4 +9,4 @@ require (
     github.com/openai/api v0.2.0
     github.com/openai/openai-go v0.2.1
     github.com/unsplash/unsplash-go v0.10.0
-) 
+)
