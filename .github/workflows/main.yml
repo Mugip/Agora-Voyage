@@ -1,4 +1,4 @@
-name: Secure App Build, Test, and Deploy
+name: Test Code
 
 on:
   push:
@@ -6,37 +6,9 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set Up Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.2
-
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18.8.0
-
-      - name: Run Code Review
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.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 }}
-        run: |
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Angular App
-        run: npm run build
-
   test:
     runs-on: ubuntu-latest
-    needs: [build]
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -44,44 +16,23 @@ jobs:
       - name: Set Up Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.2
+          go-version: 1.2  # Adjust to your Go version
 
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 18.8.0
+          node-version: 18.8.0  # Adjust to your Node.js version
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          go mod download
+          npm install
 
-      - name: Run Backend Unit Tests
+      - name: Run Go Tests
         run: go test ./...
 
-      - name: Run Frontend Unit Tests
+      - name: Run Angular Tests
         run: npm run test
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [test]
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set Up Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.2
-
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18.8.0
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Angular App
-        run: npm run build
-
-      - name: Deploy to Production
-        # Add your deployment steps here.
+      - name: Run TypeScript Linting
+        run: npm run lint
