@@ -1,5 +1,7 @@
 package utils
 
+import "errors"
+
 // AppError is a custom error type that provides additional information about application errors.
 type AppError struct {
 	Message string
