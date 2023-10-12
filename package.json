@@ -36,5 +36,8 @@
     "typescript": "^5.1.0",
     "@types/bcrypt": "^5.0.0",
     "ts-node-dev": "^2.0.0"
+    "karma": "^x.x.x",
+    "karma-jasmine": "^x.x.x",
+    "karma-chrome-launcher": "^x.x.x"
   }
 }
