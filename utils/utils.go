@@ -1,8 +1,6 @@
 package utils
 
-import (
-	"github.com/dgrijalva/jwt-go"
-)
+import "time"
 
 // AppError is a custom error type that provides additional information about application errors.
 type AppError struct {
@@ -53,3 +51,9 @@ type JWTManager struct {
 }
 
 // NewJWTManager creates a new instance of JWTManager with the provided secret key and token duration.
+func NewJWTManager(secretKey []byte, tokenDuration time.Duration) *JWTManager {
+	return &JWTManager{
+		secretKey:     secretKey,
+		tokenDuration: tokenDuration,
+	}
+}
