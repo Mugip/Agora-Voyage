@@ -23,10 +23,6 @@ jobs:
         with:
           node-version: 18.18.1  # Adjust to your Node.js version
 
-      - name: Cleanup
-        run: rm -rf node_modules
-
-
       - name: Install Dependencies
         run: |
           go mod tidy
