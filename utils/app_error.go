@@ -1,5 +1,7 @@
 package utils
 
+import "errors"
+
 // AppError is a custom error type that provides additional information about application errors.
 type AppError struct {
 	Message string
@@ -32,12 +34,3 @@ func WrapError(err error, message string, code int) *AppError {
 		Code:    code,
 	}
 }
-
-// ErrNotFound is an app-specific error instance indicating a "not found" error.
-var ErrNotFound = NewAppError("Not Found", 404)
-
-// ErrUnauthorized is an app-specific error instance indicating an "unauthorized" error.
-var ErrUnauthorized = NewAppError("Unauthorized", 401)
-
-// ErrBadRequest is an app-specific error instance indicating a "bad request" error.
-var ErrBadRequest = NewAppError("Bad Request", 400)
