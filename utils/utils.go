@@ -1,6 +1,8 @@
 package utils
 
-import "github.com/dgrijalva/jwt-go"
+import (
+	"github.com/dgrijalva/jwt-go"
+)
 
 // AppError is a custom error type that provides additional information about application errors.
 type AppError struct {
