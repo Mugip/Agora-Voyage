@@ -2,8 +2,8 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "baseUrl": "./",
-    "module": "es2023",
-    "target": "es2023",
+    "module": "esnext",
+    "target": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
