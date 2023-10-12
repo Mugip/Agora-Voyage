@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -9,6 +8,7 @@ import (
 	"github.com/spf13/viper"
 )
 
+// Config represents the application configuration.
 type Config struct {
 	Environment string
 	// Add other required configuration fields here
@@ -16,13 +16,11 @@ type Config struct {
 
 // Load loads the configuration from environment variables or configuration files
 func (c *Config) Load() error {
-	err := c.loadFromEnv()
-	if err != nil {
+	if err := c.loadFromEnv(); err != nil {
 		return err
 	}
 
-	err = c.loadFromFile()
-	if err != nil {
+	if err := c.loadFromFile(); err != nil {
 		return err
 	}
 
