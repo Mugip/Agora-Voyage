@@ -1,6 +1,6 @@
-import { ConfigOptions } from 'karma';
+import { Config } from 'karma';
 
-export default function(config: ConfigOptions) {
+export default function(config: Config) {
   config.set({
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
