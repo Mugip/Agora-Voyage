@@ -11,4 +11,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true
   },
+  "include": [
+    "src/**/*.ts",
+    "src/polyfills.ts",
+    "src/test.ts"
+  ]
 }
