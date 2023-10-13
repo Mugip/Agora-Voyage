@@ -1,5 +1,3 @@
-typescript
-// contact-form.component.ts
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
