@@ -1,4 +1,3 @@
-typescript
 import { Component, OnInit } from '@angular/core';
 import { DestinationService } from '../services/destination.service';
 
