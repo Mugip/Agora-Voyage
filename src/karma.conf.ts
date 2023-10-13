@@ -10,11 +10,6 @@ module.exports = (config: ConfigOptions) => {
     ],
     browsers: ['Chrome'],
     reporters: ['progress', 'kjhtml'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    singleRun: false,
-    restartOnFileChange: true
+    singleRun: false
   });
 };
