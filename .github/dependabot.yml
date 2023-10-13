@@ -1,0 +1,42 @@
+version: 2
+updates:
+  # Enable version updates for npm (JavaScript/Node.js) dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Enable version updates for Go dependencies
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Enable security updates for all package managers
+  - package-ecosystem: "all"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 5
+
+  # Optionally, customize the update behavior for specific dependencies or paths
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+    versions:
+      - ">= 1.0.0"
+    ignore:
+      - "^1.2.3"
+
+# Example configuration for ignoring certain dependency updates
+ignore:
+  - dependency-name: "lodash"
+    versions:
+      - "< 4.0.0"
+
+# Example configuration for custom reviewers and assignees for Dependabot PRs
+assignees:
+  - "Mugip"
