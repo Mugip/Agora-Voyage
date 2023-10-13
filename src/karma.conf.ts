@@ -1,6 +1,6 @@
-import { ConfigOptions, Config } from 'karma';
+import { Config } from 'karma';
 
-module.exports = (config: Config & ConfigOptions) => {
+module.exports = (config: Config) => {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -13,16 +13,13 @@ module.exports = (config: Config & ConfigOptions) => {
     client: {
       clearContext: false
     },
-    coverageReporter: {
+    coverageIstanbulReporter: {
       dir: require('path').join(__dirname, 'coverage'),
-      reporters: [
-        { type: 'html', subdir: 'report-html' },
-        { type: 'lcovonly', subdir: 'report-lcov' },
-        { type: 'text-summary' }
-      ]
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true
     },
     reporters: (config.angularCli && config.angularCli.codeCoverage)
-      ? ['progress', 'coverage']
+      ? ['progress', 'coverage-istanbul']
       : ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
