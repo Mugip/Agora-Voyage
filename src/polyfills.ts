@@ -1,4 +1,3 @@
-typescript
 /***************************************************************************************************
 * POLYFILLS
 */
@@ -41,7 +40,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 // Example polyfills for web-animations-js (required for animations)
 // Uncomment the import statement and install the corresponding npm package.
 
- import 'web-animations-js';  // Run `npm install --save web-animations-js`.
+ import 'web-animations-js';   Run `npm install --save web-animations-js`.
 
 // Example polyfills for classlist.js (required for modern browsers' classlist support)
 // Uncomment the import statement and install the corresponding npm package.
