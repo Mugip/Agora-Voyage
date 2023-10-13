@@ -1,6 +1,4 @@
-import { Config, ConfigOptions } from 'karma';
-
-export default function (config: Config & ConfigOptions) {
+module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -29,4 +27,4 @@ export default function (config: Config & ConfigOptions) {
     singleRun: false,
     restartOnFileChange: true
   });
-}
+};
