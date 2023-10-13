@@ -1,4 +1,3 @@
-go
 package authentication
 
 import (
