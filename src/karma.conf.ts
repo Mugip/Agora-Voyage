@@ -1,4 +1,5 @@
 import { Config } from 'karma';
+
 module.exports = (config: Config) => {
   config.set({
     basePath: '',
@@ -20,7 +21,7 @@ module.exports = (config: Config) => {
         { type: 'text-summary' }
       ]
     },
-    reporters: config.angularCli && config.angularCli.codeCoverage
+    reporters: (config.angularCli && config.angularCli.codeCoverage)
       ? ['progress', 'coverage']
       : ['progress', 'kjhtml'],
     port: 9876,
@@ -31,4 +32,4 @@ module.exports = (config: Config) => {
     singleRun: false,
     restartOnFileChange: true
   });
-}
+};
