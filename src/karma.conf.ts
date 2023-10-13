@@ -1,6 +1,6 @@
-import { Config } from 'karma';
+import { Config, ConfigOptions } from 'karma';
 
-module.exports = (config: Config) => {
+module.exports = (config: Config & ConfigOptions) => {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -11,7 +11,7 @@ module.exports = (config: Config) => {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      clearContext: false
+      clearContext: false // leave Jasmine Spec Runner output visible in the browser
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, 'coverage'),
