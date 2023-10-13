@@ -1,6 +1,6 @@
 import { ConfigOptions } from 'karma';
 
-module.exports = (config: ConfigOptions) => {
+export default function(config: ConfigOptions) {
   config.set({
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
@@ -12,4 +12,4 @@ module.exports = (config: ConfigOptions) => {
     reporters: ['progress', 'kjhtml'],
     singleRun: false
   });
-};
+}
