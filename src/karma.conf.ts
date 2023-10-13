@@ -9,7 +9,7 @@ export default function(config: Config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     browsers: ['Chrome'],
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress'], // Remove 'kjhtml' reporter
     singleRun: false
   });
 }
