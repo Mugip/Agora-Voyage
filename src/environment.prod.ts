@@ -1,6 +1,3 @@
-typescript
-// environment.prod.ts
-
 export const environment = {
   production: true,
   unsplashApiKey: 'your_unsplash_api_key',
