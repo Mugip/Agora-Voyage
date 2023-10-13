@@ -1,4 +1,6 @@
-module.exports = function (config) {
+import { ConfigOptions } from 'karma';
+
+module.exports = (config: ConfigOptions) => {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
