@@ -30,7 +30,7 @@ jobs:
           npm install
 
       - name: Install Jasmine Typings from GitHub
-        run: npm install --save-dev git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#master:types/jasmine
+        run: npm install --save-dev git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/jasmine
 
       - name: Run Go Tests
         run: go test ./...
