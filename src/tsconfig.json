@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["jasmine"],
     "outDir": "./dist/out-tsc",
     "baseUrl": "./",
     "module": "esnext",
