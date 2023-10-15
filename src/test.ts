@@ -1,6 +1,3 @@
-typescript
-// test.ts
-
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ApiService } from 'path/to/api.service';
