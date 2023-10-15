@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": "./",
+    "types": ["jasmine"],
     "outDir": "./dist/out-tsc",
-    "strict": true,
+    "baseUrl": "./",
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "types": ["jasmine"],
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "strict": true
   },
+  "files": [
+    "Agora-Voyage/src/polyfills.ts",
+    "Agora-Voyage/src/test.ts",
+    "Agora-Voyage/src/jasmine.d.ts"
+  ],
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/polyfills.ts",
-    "src/test.ts"
+    "Agora-Voyage/src/**/*.ts"
   ]
 }
