@@ -40,7 +40,6 @@ func (jm *JWTManager) ParseToken(tokenString string) (jwt.MapClaims, error) {
 		return nil, err
 	}
 
-	// Claims method expects jwt.MapClaims
 	if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
 		return claims, nil
 	}
