@@ -32,9 +32,7 @@ Agora Voyage is a luxurious travel app that seamlessly blends sophistication wit
 
 14.Animations:Subtle animations to enhance dynamism and sophistication.
 
-# usage command
-npm startContributing
-
+# usage
 [We welcome contributions!
 Follow these steps to contribute:
 Fork the repository
