@@ -14,6 +14,6 @@
     "baseUrl": "./",
     "types": ["node", "jasmine"]
   },
-  "include": ["src/**/*.ts", "src/**/*.spec.ts"],
+  "include": ["src/**/*.ts", "src/**/*.spec.ts", "./**/*.ts", "./**/*.d.ts"],
   "exclude": ["node_modules"]
 }
