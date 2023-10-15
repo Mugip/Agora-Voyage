@@ -31,7 +31,7 @@ func (jm *JWTManager) GenerateToken(claims jwt.Claims) (string, error) {
 }
 
 // ParseToken parses the provided JWT token and returns the claims.
-func (jm *JWTManager) ParseToken(tokenString string) (jwt.Claims, error) {
+func (jm *JWTManager) ParseToken(tokenString string) (jwt.MapClaims, error) {
 	token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
 		return jm.secretKey, nil
 	})
