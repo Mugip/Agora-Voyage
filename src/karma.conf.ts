@@ -8,7 +8,7 @@ export default function(config: Config) {
       require('karma-chrome-launcher'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     reporters: ['progress'],
     singleRun: false
   });
