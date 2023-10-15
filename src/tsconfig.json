@@ -13,11 +13,8 @@
     "types": ["jasmine"]
   },
   "include": [
-    "src/**/*.ts"
-  ],
-  "files": [
+    "src/**/*.ts",
     "src/polyfills.ts",
-    "src/test.ts",
-    "src/jasmine.d.ts"
+    "src/test.ts"
   ]
 }
