@@ -4,35 +4,35 @@
 Agora Voyage is a luxurious travel app that seamlessly blends sophistication with cutting-edge technology. Explore exclusive destinations, accommodations, and experiences with our sleek and user-friendly interface, offering a tailored journey for discerning travelers.
 
 ## Features
-# 1.Sleek and User-Friendly Interface:Elegant design for seamless navigation.Intuitive interface reflecting luxury and sophistication.
+1.Sleek and User-Friendly Interface:Elegant design for seamless navigation.Intuitive interface reflecting luxury and sophistication.
 
-# 2.High-Quality Visuals:Stunning imagery and videos showcasing luxury destinations.Visuals evoke exclusivity and allure for a captivating experience.
+2.High-Quality Visuals:Stunning imagery and videos showcasing luxury destinations.Visuals evoke exclusivity and allure for a captivating experience.
 
-# 3.Advanced Search and Filters:Robust search functionality for tailored results.Filters for destinations, travel dates, experiences, amenities, and price range.
+3.Advanced Search and Filters:Robust search functionality for tailored results.Filters for destinations, travel dates, experiences, amenities, and price range.
 
-# 4.Personalization:User profiles storing preferences and past bookings.Personalized recommendations, promotions, and customized itineraries.
+4.Personalization:User profiles storing preferences and past bookings.Personalized recommendations, promotions, and customized itineraries.
 
-# 5.Real-time Availability and Pricing:Integration with luxury service providers for accurate information.Transparency in pricing and real-time availability.
+5.Real-time Availability and Pricing:Integration with luxury service providers for accurate information.Transparency in pricing and real-time availability.
 
-# 6.Seamless Booking Process:Streamlined reservations directly through the app.Secure and flexible payment options for convenience.
+6.Seamless Booking Process:Streamlined reservations directly through the app.Secure and flexible payment options for convenience.
 
-# 7.Exclusive Partnerships:Strategic alliances for unique perks and added value.VIP treatment, complimentary upgrades, and exclusive access. 
+7.Exclusive Partnerships:Strategic alliances for unique perks and added value.VIP treatment, complimentary upgrades, and exclusive access. 
 
-# 8.Unique Features and InsightsExclusive Access:VIP experiences, high-profile events, and behind-the-scenes access.Reservations at renowned restaurants and private yacht parties.
+8.Unique Features and InsightsExclusive Access:VIP experiences, high-profile events, and behind-the-scenes access.Reservations at renowned restaurants and private yacht parties.
 
-# 9.Customized Itineraries:Tailored travel plans based on preferences and lifestyle.Recommendations for luxury accommodations, dining, spa, and cultural activities.
+9.Customized Itineraries:Tailored travel plans based on preferences and lifestyle.Recommendations for luxury accommodations, dining, spa, and cultural activities.
 
-# 10.Insider Knowledge:Insider tips and local expertise for hidden gems.Discover unexplored experiences and off-the-beaten-path attractions.
+10.Insider Knowledge:Insider tips and local expertise for hidden gems.Discover unexplored experiences and off-the-beaten-path attractions.
 
-# 11.Seamless Concierge Services:Top-tier concierge assistance for every client request.24/7 availability for transportation, reservations, and support.
+11.Seamless Concierge Services:Top-tier concierge assistance for every client request.24/7 availability for transportation, reservations, and support.
 
-# 12.Design ElementsColor Scheme:Deep blue shades (navy or indigo) with gold/silver accents for elegance.Typography:Classic serif font style for readability and sophistication.
+12.Design ElementsColor Scheme:Deep blue shades (navy or indigo) with gold/silver accents for elegance.Typography:Classic serif font style for readability and sophistication.
 
-# 13.Visual Elements:High-quality images of luxurious destinations and experiences.Clean and minimalist layout for a user-friendly experience.
+13.Visual Elements:High-quality images of luxurious destinations and experiences.Clean and minimalist layout for a user-friendly experience.
 
-# 14.Animations:Subtle animations to enhance dynamism and sophistication.
+14.Animations:Subtle animations to enhance dynamism and sophistication.
 
-## Installation
+# Installation
 [instructions on how to install and set up the app are still under development.]
 
 # usage command
@@ -42,5 +42,5 @@ npm startContributing
 ## License.
 [This project is licensed under the MIT License - see the LICENSE.md file for details.]
 
-## Acknowledgements
-# [Pius Mugisha] - [mugishapius12@gmail.com]
+# Acknowledgements
+[Pius Mugisha] - [mugishapius12@gmail.com]
