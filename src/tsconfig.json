@@ -16,6 +16,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/polyfills.ts",
+    "src/test.ts"
   ]
 }
