@@ -1,25 +1,23 @@
 {
   "compilerOptions": {
-    "types": ["jasmine"],
-    "outDir": "./dist/out-tsc",
-    "baseUrl": "./",
-    "module": "esnext",
     "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["jasmine"]
   },
   "include": [
-    "src/**/*.ts",
-    "src/jasmine.d.ts",
-    "src/polyfills.ts",
-    "src/test.ts"
+    "src/**/*.ts"
   ],
   "files": [
     "src/polyfills.ts",
-    "src/test.ts"
+    "src/test.ts",
+    "src/jasmine.d.ts"
   ]
 }
