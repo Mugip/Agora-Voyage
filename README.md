@@ -32,9 +32,6 @@ Agora Voyage is a luxurious travel app that seamlessly blends sophistication wit
 
 14.Animations:Subtle animations to enhance dynamism and sophistication.
 
-# Installation
-[instructions on how to install and set up the app are still under development.]
-
 # usage command
 npm startContributing
 [We welcome contributions!
@@ -44,7 +41,8 @@ Create a new branch (git checkout -b feature/your-feature)
 Commit your changes (git commit -m 'Add some feature')
 Push to the branch (git push origin feature/your-feature)
 Open a pull request
-# For major changes, please open an issue first to discuss what you would like to change.]
+
+For major changes, please open an issue first to discuss what you would like to change.]
 
 ## License.
 [This project is licensed under the MIT License - see the LICENSE.md file for details.]
