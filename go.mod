@@ -7,4 +7,5 @@ require (
     github.com/jinzhu/gorm v1.9.16
     github.com/golang-jwt/jwt/v5 v5.0.0
     github.com/go-sql-driver/mysql v1.6.0
+    github.com/dgrijalva/jwt-go v3.2.0
 )
