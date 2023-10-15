@@ -14,8 +14,12 @@
   },
   "include": [
     "src/**/*.ts",
+    "src/jasmine.d.ts",
     "src/polyfills.ts",
-    "src/test.ts",
-    "src/jasmine.d.ts"
+    "src/test.ts"
+  ],
+  "files": [
+    "src/polyfills.ts",
+    "src/test.ts"
   ]
 }
