@@ -39,6 +39,8 @@
     "@types/karma": "^x.x.x",
     "karma": "^x.x.x",
     "karma-jasmine": "^x.x.x",
-    "karma-chrome-launcher": "^x.x.x"
+    "karma-chrome-launcher": "^x.x.x",
+    "@types/jasmine": "latest"
+  }
   }
 }
